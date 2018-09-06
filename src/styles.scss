@@ -5,3 +5,14 @@ $text-light: #EEE;
 $text-light-blue: rgb(0, 204, 255);
 $text-dark: #222;
 $text-dark-blue: rgb(0, 35, 148);
+
+.page-background {
+  background-color: $primary-background-color;
+  margin-top: 12vh;
+  height: 2000vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

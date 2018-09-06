@@ -1,15 +1,30 @@
 <template>
   <div class="app">
     <div class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/store">Store</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/careers">Careers</router-link>
+      <div class="nav-links">
+        <router-link to="/">Home</router-link>
+        <router-link to="/store">Store</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/careers">Careers</router-link>
+      </div>
+      <div class="nav-logo">
+        <Logo class="logo"/>
+      </div>
     </div>
     <router-view/>
   </div>
 </template>
 
+<script>
+  import Logo from '@/components/Logo.vue'
+  
+  export default {
+    name: 'app',
+    components: {
+      Logo
+    }
+  }
+</script>
 
 <style lang="scss" >
 @import 'styles.scss';
@@ -21,8 +36,30 @@
   $background-color: $primary-background-color;
 }
 .nav {
-  padding: 30px;
+  height: 12vh;
+  display: flex;
+  position: fixed;
   background-color: $navbar-color;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  .nav-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2vw;
+    align-items: center;
+  }
+  .nav-logo {
+    width: 60%;
+  }
+  .logo {
+    height: 60%;
+    float: right;
+    margin-top: 12vh * .2;
+    margin-right: 2vw;
+  }
   a {
     font-weight: bold;
     color: $text-light;
