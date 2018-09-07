@@ -64,7 +64,7 @@
     font-weight: bold;
     color: $text-light;
     &.router-link-exact-active {
-      color: $text-light-blue;
+      color: $text-light-green;
     }
   }
 }
